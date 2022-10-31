@@ -9,7 +9,7 @@
       </a>
     </li>
     <li>
-      <a href="mailto:wmbbll@163.com" title="点击发送邮件">
+      <a href="mailto:zeroTwobob8@gmail.com" title="点击发送邮件">
         <div class="icon">
           <Icon type="mail" />
         </div>
