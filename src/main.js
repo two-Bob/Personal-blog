@@ -7,7 +7,7 @@ import router from './router'
 import showMessage from './utils/showMessage'
 Vue.prototype.$showMessage = showMessage //创建到vue原型中
 import './mock'
-
+import '@/assets/css/iconfont/iconfont.css'
 import './api/banner'
 import vLoading from '@/directives/loading'
 Vue.directive('loading', vLoading)

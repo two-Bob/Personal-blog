@@ -1,4 +1,4 @@
-import loadingUrl from '@/assets/loading.gif'
+import loadingUrl from '@/assets/img/loading.gif'
 import styles from './loading.module.less'
 
 /**
