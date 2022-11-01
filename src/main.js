@@ -16,3 +16,8 @@ new Vue({
 	router,
 	render: (h) => h(App),
 }).$mount('#app')
+
+import { getBlogTypes, getBlogs } from './api/blog'
+Promise.all([getBlogTypes, getBlogs(2, 20, 3)]).then(([a, b]) => {
+	console.log(a, b)
+})
