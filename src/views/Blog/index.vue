@@ -1,35 +1,21 @@
 <template>
-	<MapList :list="list" @select="handleSelect" />
+	<Layout v-loading="isLoading">
+		<BlogList :list="list" @select="handleSelect" />
+		<template #right>
+			<BlogCategory></BlogCategory>
+		</template>
+	</Layout>
 </template>
 
 <script>
-import MapList from './components/MapList'
+import BlogList from './components/BlogList'
+import Layout from '@/components/Layout'
+import BlogCategory from './components/BlogCategory'
+
 export default {
 	data() {
 		return {
-			list: [
-				{ name: 'a', isSelect: false },
-				{
-					name: 'b',
-					isSelect: false,
-					children: [
-						{
-							name: 'c',
-							isSelect: false,
-							children: [
-								{ name: 'c', isSelect: false },
-								{ name: 'd', isSelect: false },
-								{ name: 'e', isSelect: false },
-							],
-						},
-						{ name: 'd', isSelect: false },
-						{ name: 'e', isSelect: false },
-					],
-				},
-				{ name: 'c', isSelect: false },
-				{ name: 'd', isSelect: false },
-				{ name: 'e', isSelect: false },
-			],
+			list: [],
 		}
 	},
 	methods: {
@@ -38,7 +24,9 @@ export default {
 		},
 	},
 	components: {
-		MapList,
+		BlogList,
+		Layout,
+		BlogCategory,
 	},
 }
 </script>
