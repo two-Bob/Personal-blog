@@ -6,14 +6,13 @@ Mock.mock('/api/blogtype', 'get', {
 	'data|10-20': [
 		{
 			'id|+1': 1,
-			name: 'category@id',
+			name: '分类@id',
 			'articleCount|0-300': 0,
 		},
 	],
 })
 Mock.mock(/^\/api\/blog(\?.+)?$/, 'get', function(option) {
 	const query = qs.parse(option.url)
-	console.log(query)
 	return Mock.mock({
 		code: 0,
 		msg: '',
@@ -31,7 +30,7 @@ Mock.mock(/^\/api\/blog(\?.+)?$/, 'get', function(option) {
 					'scanNumber|0-3000': 0,
 					'commentNumber|0-300': 30,
 					'thumb|1': [
-						Mock.Random.image('300x250', '#000', '#fff', '@title'),
+						Mock.Random.image('200x150', '#ccc', '#000', '@title'),
 						null,
 					],
 					createDate: `@date('T')`,

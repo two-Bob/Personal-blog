@@ -1,6 +1,6 @@
 <template>
-	<Layout v-loading="isLoading">
-		<BlogList :list="list" @select="handleSelect" />
+	<Layout>
+		<BlogList />
 		<template #right>
 			<BlogCategory></BlogCategory>
 		</template>
@@ -18,11 +18,7 @@ export default {
 			list: [],
 		}
 	},
-	methods: {
-		handleSelect(res) {
-			res.isSelect = !res.isSelect
-		},
-	},
+	methods: {},
 	components: {
 		BlogList,
 		Layout,

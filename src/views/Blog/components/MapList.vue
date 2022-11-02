@@ -2,10 +2,14 @@
 	<ul class="maplist-container">
 		<li
 			v-for="(item, index) in list"
+			class="block"
 			:class="{ active: item.isSelect }"
 			:key="index"
 		>
 			<span @click="handleClick(item)">{{ item.name }}</span>
+			<span v-if="item.aside" @click="handleClick(item)" class="aside">{{
+				item.aside
+			}}</span>
 			<MapList
 				v-if="item.children"
 				:list="item.children"
@@ -45,12 +49,18 @@ export default {
 .maplist-container {
 	list-style: none;
 	padding: 0;
+	.block {
+		cursor: pointer;
+	}
 	.maplist-container {
 		margin-left: 1em;
 	}
 	li {
 		min-height: 40px;
 		line-height: 40px;
+		.aside {
+			margin-left: 10px;
+		}
 		&.active {
 			color: @warn;
 			font-weight: bold;
