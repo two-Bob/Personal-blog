@@ -21,7 +21,6 @@ export default {
 	},
 	methods: {
 		handleSelect(res) {
-			console.log(this.list)
 			const query = {
 				page: 1,
 				limit: this.limit,
