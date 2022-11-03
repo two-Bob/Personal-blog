@@ -50,9 +50,8 @@ export default {
 		Pager,
 	},
 	methods: {
-        // 判断获取点击的页数来改变路由
+		// 判断获取点击的页数来改变路由
 		handlePageChange(newPage) {
-            
 			const query = {
 				page: newPage,
 				limit: this.routeInfo.limit,
@@ -105,34 +104,48 @@ export default {
 }
 </script>
 <style lang="less" scoped>
+@import '~@/styles/var.less';
 .BlogList-layout {
 	height: 100%;
-	overflow: auto;
+	width: 100%;
+	padding: 20px;
+	overflow-y: scroll;
 	box-sizing: border-box;
 	position: relative;
-	.bloglist {
+	scroll-behavior: smooth;
+	ul {
 		list-style: none;
-		border-bottom: 1px solid rgba(92, 90, 90, 0.7);
+		margin: 0;
+		padding: 0;
+	}
+	.bloglist {
+		padding: 15px 0;
+		border-bottom: 1px solid @gray;
 		display: flex;
 		.thumb {
-			height: 100%;
+			flex: 0 0 auto;
+			margin-right: 15px;
 			img {
-				height: 100%;
-				width: auto;
-				margin: 10px;
+				display: block;
+				max-width: 200px;
+				border-radius: 5px;
 			}
 		}
 		.main {
+			flex: 1 1 auto;
 			.aside {
 				white-space: nowrap;
+				font-size: 12px;
+				color: @gray;
 				span,
 				a {
 					color: gray;
-					margin-right: 10px;
+					margin-right: 15px;
 				}
 			}
 			.desc {
-				padding: 10px 0;
+				margin: 15px 0;
+				font-size: 14px;
 			}
 		}
 	}

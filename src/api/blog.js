@@ -19,3 +19,10 @@ export async function getBlogs(page = 1, limit = 10, categoryid = -1) {
 export async function getBlogCategories() {
 	return await request.get('/api/blogtype')
 }
+
+/**
+ * 获取单个博客
+ */
+export async function getBlog(params) {
+    
+}
