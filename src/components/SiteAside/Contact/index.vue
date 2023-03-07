@@ -25,11 +25,11 @@
 			</a>
 		</li>
 		<li>
-			<a href="mailto:zeroTwobob8@gmail.com" title="点击发送邮件">
+			<a href="mailto:wmbbll@163.com" title="点击发送邮件">
 				<div class="icon">
 					<Icon type="mail" />
 				</div>
-				<span>zeroTwobob8@gmail.com</span>
+				<span>wmbbll@163.com</span>
 			</a>
 		</li>
 		<li>
@@ -51,10 +51,7 @@
 				<span>two-Bob</span>
 			</a>
 			<div class="pop">
-				<img
-					src="http://r.photo.store.qq.com/psc?/V14KUL8R4TRssk/45NBuzDIW489QBoVep5mccA3GBsXlqRPgLsZR*RiX79jlttTtqioeO23YZC1Ay9bhW0NTy7K6vwQRgj4P2VqSyV1mpYPz1D.swhtuHZsB1Q!/r"
-					alt=""
-				/>
+				<img src="@/assets/img/weixin.jpg"/>
 			</div>
 		</li>
 	</ul>
